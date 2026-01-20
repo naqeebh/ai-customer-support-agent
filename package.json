@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-  "build": "tsc",
-  "start": "node dist/app.js"
-},
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@openai/agents": "^0.4.1",
     "dotenv": "^17.2.3",
@@ -24,15 +24,4 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
-  {
-  "compilerOptions": {
-    "target": "ES2022",
-    "module": "CommonJS",
-    "rootDir": "src",
-    "outDir": "dist",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
-  }
-}
 }
