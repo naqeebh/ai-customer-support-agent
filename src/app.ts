@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
+import { aiRouter } from './routers/aiRouter'
 
 const app = express()
 app.use(express.json())
@@ -7,6 +8,8 @@ app.use(express.json())
 app.get('/health', (_req, res) => {
   res.json({ ok: true })
 })
+
+app.use('/ai', aiRouter)
 
 // Global error handler (so the app never crashes from an unhandled error)
 app.use(
